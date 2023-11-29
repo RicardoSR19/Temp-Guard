@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name = "viewpoint" content="width=device-width, initial-scale=1.0">
+    <title> Temp Guard </title>
+    <link rel="shortcut icon" href="./images/TempGuard.png" type="image/x - icon">
+    <link rel="stylesheet" href="./css/Estilos.css">
+    <link rel="stylesheet" href="./css/Normalize.css">
+    <link rel="stylesheet" href="./css/Carrousel.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        body {
+            background-color: #b2b2b2; /* Cambia el color de fondo según tu preferencia */
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="hero" id="inicio">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">Temp Guard</h2>
+            </div>
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                    <a href="#inicio" class="nav__links">Inicio</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#desc" class="nav__links">Descripción</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#conec" class="nav__links">Conectividad</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#bdd" class="nav__links">Base de datos</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#df" class="nav__links">Diseño Final</a>
+                </li>
+                <li class="nav__items">
+                    <a href="#inter" class="nav__links">Interfaz</a>
+                </li>
+                <img src="./images/close.svg" class="nav__close"alt="">
+            </ul>
+            <div class="nav__menu">
+                <img src="./images/menu.svg" class="nav__img"alt="">
+            </div>
+        </nav>
+        <section class="hero__container container">
+            <h1 class="hero__title">Proyecto</h1>
+            <p class="hero__paragraph">Dispositivo de medición de temperatura</p>
+            <a href="#"class="cta">Inicio</a>
+        </section>
+    </header>
+    <main>
+
+        <section class="knowledge">
+            <div class="knowledge__container container" id="desc">
+                <div class="knowledge__text-container">
+                    <h2 class="subtitle">Descripción</h2>
+                    <div class="knowledge__text">Temp Guard es el guardián inteligente de la temperatura que lleva el control ambiental a un nuevo nivel de precisión. Más que un medidor, es una herramienta avanzada que mantiene cualquier espacio a su temperatura ideal, con variaciones mínimas. Su tecnología inteligente se sincroniza con una base de datos segura, facilitando el registro y la monitorización de múltiples espacios a través de una aplicación móvil clara y completa. Idóneo para hogares inteligentes, industrias y edificios automatizados, Temp Guard es la solución definitiva en monitoreo térmico: confiable, sofisticado y discreto. Con Temp Guard, el control del clima perfecto está literalmente en sus manos.</div>
+                    <a href="#" class="cta">Loading...</a>
+                </div>
+
+                <figure class="knowledge__picture">
+                    <img src="./images/TG-n.jpeg" class="knowledge__img" style="border-radius: 15px;">
+
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="container about" id="conec">
+            <h2 class="subtitle">Conectividad</h2>
+            <p class="about__paragraph">Temp Guard y su conectividad</p>
+            <div class="about__main">
+        
+                <!-- Contenedor 1 -->
+                <!-- Contenedor 1 -->
+                <article class="about__icons about__icons-container">
+                    <img src="./images/industry.svg" class="about__icon">
+                    <h3 class="about__title">Industria</h3>
+                    <div class="about__button" onclick="toggleText(1)">Ver más información</div>
+                    <div class="about__text-container hidden" id="aboutTextContainer1">
+                        <p class="about__paragraph">Temp Guard en entornos industriales se beneficia de las tecnologías LPWAN y Cellular para una conexión eficiente. La baja potencia de LPWAN asegura una duración prolongada de la batería, y la amplia cobertura de redes celulares garantiza conectividad en diversos entornos. Esto permite un monitoreo preciso de la temperatura y la detección de condiciones anómalas como fugas o fluctuaciones térmicas.</p>
+                    </div>
+                </article>
+                <!-- Contenedor 2 -->
+                <article class="about__icons about__icons-container">
+                    <img src="./images/smarthome.svg" class="about__icon">
+                    <h3 class="about__title">Smart Building</h3>
+                    <div class="about__button" onclick="toggleText(2)">Ver más información</div>
+                    <div class="about__text-container hidden" id="aboutTextContainer2">
+                        <p class="about__paragraph">En entornos de edificios inteligentes, Temp Guard se beneficia de la misma tecnología LPWAN, proveyendo la misma eficiencia energética y comunicación constante que en el entorno de industria.</p>
+                    </div>
+                </article>
+                <!-- Contenedor 3 -->
+                <article class="about__icons about__icons-container">
+                    <img src="./images/home.svg" class="about__icon">
+                    <h3 class="about__title">Smart Home</h3>
+                    <div class="about__button" onclick="toggleText(3)">Ver más información</div>
+                    <div class="about__text-container hidden" id="aboutTextContainer3">
+                        <p class="about__paragraph">En casas inteligentes, Temp Guard emplea la conectividad versátil de Wi-Fi, BLE y Zigbee para integrar de manera eficiente el monitoreo de temperatura. La conexión Wi-Fi garantiza la transmisión confiable de datos, mientras que BLE y Zigbee son ideales para dispositivos de bajo consumo y comunicación cercana. Esta combinación permite un seguimiento preciso de la temperatura, así como el control remoto y la gestión automatizada del hogar.</p>
+                    </div>
+                </article>
+            
+            </div>
+        </section>
+
+        <section class="price container" id="bdd">
+            <h2 class="subtitle">Base de datos</h2>
+            <div class="price__table">
+                <!-- Primer elemento -->
+                <div class="price__element">
+                    <h3 class="price__price">Atributos a guardar</h3>
+                    <div class="price__items">
+                        <p class="price__features">Nuestra base de datos guardará los siguientes datos:<br><br>
+                            Usuario: ID del usuario, junto con su nombre y contraseña y temperatura a establecer.<br>
+                            Sensor de Temp Guard: ID del sensor y temperatura.<br>
+                            Eventos: ID del evento y el Estatus (si la temperatura salió del rango determinado).<br>
+                            El registro de datos y uso de sensor guardará la temperatura y un timestamp de cuando fue tomado el valor.
+                        </p>
+                    </div>
+                    <a href="#" class="price__cta" onclick="togglePriceText(1, event)">Ver más</a>
+                </div>
+        
+                <!-- Segundo elemento -->
+                <div class="price__element price__element--best">
+                    <h3 class="price__price2">Funcionamiento</h3>
+                    <div class="price__items">
+                        <p class="price__features">Nuestra base de datos tendría las siguientes funciones:<br><br>
+                            Registrar los Usuarios y los sensores relacionados a ellos.<br>
+                            Registrar la interacción de los sensores para monitorear la temperatura y el sistema asociado con el registro de la hora específica de uso, y esto a su vez lo relaciona con el usuario y el sensor.<br>
+                            Registrar los eventos, las temperaturas estables y el momento en que la temperatura se sale del rango determinado (evento).<br>
+                            Registrar cuando se activan o desactivan los sistemas de calefacción o refrigeración en respuesta a los datos del sensor que indican una desviación de la temperatura establecida.<br>
+                            Permitir consultar las temperaturas registradas, el estado actual de la temperatura, y la frecuencia de los cambios de estado.<br>
+                            Permitir monitorear a distancia la temperatura de un espacio definido y registrar la frecuencia de los cambios de estado para detectar la necesidad de mantenimiento.
+                            
+                        </p>
+                    </div>
+                    <a href="#" class="price__cta" onclick="togglePriceText(2, event)">Ver más</a>
+                </div>
+        
+                <!-- Tercer elemento -->
+                <div class="price__element">
+                    <h3 class="price__price">¿Por qué guardar estos datos?</h3>
+                    <div class="price__items">
+                        <p class="price__features">El guardar estos datos permitiría lo siguiente:<br><br>
+                            Almacenar los datos del usuario y sus preferencias de temperatura lo que da una mejor personalización y experiencia, garantizando que el entorno se mantenga en las condiciones que él desea.<br>
+                            Los datos de temperatura y tiempo son cruciales para monitorizar las condiciones ambientales en tiempo real y para que el sistema responda automáticamente al activar o desactivar los sistemas de calefacción o refrigeración.<br>
+                            La acumulación de datos históricos de temperatura y eventos permite el análisis de tendencias a lo largo del tiempo, lo que puede indicar patrones de uso y ayudar a identificar áreas para mejorar la eficiencia energética.<br>
+                            La frecuencia de los cambios de estado térmico y las condiciones inestables pueden señalar la necesidad de mantenimiento preventivo en los sistemas de calefacción y refrigeración, potencialmente evitando fallas y prolongando la vida útil del equipo.<br>
+                            Guardar los estados de eventos y la activación del LED permite al sistema notificar al usuario de condiciones inusuales o críticas, lo que mejora la seguridad y la respuesta a posibles riesgos.
+                        </p>
+                    </div>
+                    <a href="#" class="price__cta" onclick="togglePriceText(3, event)">Ver más</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="knowledge" id="df">
+            <div class="knowledge__container container">
+                <figure class="knowledge__picture">
+                    <img src="./images/P2.jpeg" class="knowledge__img" style="border-radius: 15px;">
+                </figure>
+        
+                <div class="knowledge__text-container">
+                    <h2 class="subtitle">Diseño Final</h2>
+                    <div class="knowledge__text">Aluminio de Alta Calidad: <br>Construido con la resistencia en mente, la carcaza es de aluminio de alta calidad haciendo que este dispositivo no solo sea duradero sino que también resista en una variedad de entornos y disipe de una manera más eficiente el calor. <br><br>Visualización Clara con Cristal Polarizado: <br>Este material permite que la brindar una visualización nítida y sin reflejos de las mediciones, facilitando la lectura de la información bajo cualquier condición de iluminación.
+                    </div>
+                    <a href="#" class="cta">Loading...</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Nueva sección -->
+        <section class="new-section">
+            <div class="interface-container">
+        <!-- Contenido del contenedor de interfaz -->
+        <!-- Puedes agregar contenido adicional aquí -->
+    </div>
+
+    <div class="vertical-containers">
+        <!-- Contenido del primer contenedor -->
+        <div class="content-container">
+            <!-- Tu contenido aquí -->
+        </div>
+
+        <!-- Contenido del segundo contenedor -->
+        <div class="content-container" id="inter">
+            <!-- Tu contenido aquí -->
+        </div>
+    </div>
+</section>
+
+        <section class="new-section">
+            <div class="interface-container">
+                <h3 class="section-title">Interfaz</h3>
+                <!-- Contenido del contenedor de interfaz -->
+                <!-- Puedes agregar contenido adicional aquí -->
+            </div>
+        
+            <div class="vertical-containers">
+                <!-- Primer contenedor vertical -->
+                <div class="content-container">
+                    <h2 class="container-title">Arduino</h2>
+                    <!-- Contenido del primer contenedor si es necesario -->
+                    <!-- Por ejemplo, aquí puedes agregar el contenedor de la computadora -->
+                    <div class="computer-container">
+                        <!-- Pantalla de la computadora con fondo de la imagen -->
+                        <div class="screen" style="background-image: url('./images/Pantalla.PNG'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <!-- Contenido de la pantalla (puedes agregar más contenido aquí) -->
+                        </div>
+        
+                        <!-- Cuerpo de la computadora -->
+                        <div class="body">
+                            <!-- Teclado (puedes personalizar según tus necesidades) -->
+                            <div class="keyboard">
+                                <button>Calefacción</button>
+                                <button>Refrigeración</button>
+                                <!-- Agrega más botones según sea necesario -->
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Teléfono simulado dentro del contenedor de Arduino -->
+                    <div class="phone-container">
+                        <!-- Pantalla del teléfono con fondo de la imagen -->
+                        <div class="screen" style="background-image: url('./images/ya.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+                            <!-- Contenido de la pantalla (puedes agregar más contenido aquí) -->
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Segundo contenedor vertical -->
+                <div class="content-container">
+                    <h2 class="container-title">Final</h2>
+                    <!-- Otro contenido del segundo contenedor si es necesario -->
+                    <div class="phone-wrapper">
+                        <div class="swiper-container">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="images/1.png" alt="Imagen 1" class="imgt">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/2.png" alt="Imagen 1" class="imgt">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/3.png" alt="Imagen 1" class="imgt">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/4.png" alt="Imagen 1" class="imgt">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/5.png" alt="Imagen 2" class="imgt">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/6.png" alt="Imagen 3" class="imgt">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="images/7.png" alt="Imagen 3" class="imgt">
+                            </div>
+                          </div>
+                          <!-- Agrega la paginación -->
+                          <div class="swiper-pagination"></div>
+                          <!-- Agrega las flechas de navegación -->
+                          <div class="swiper-button-next"></div>
+                          <div class="swiper-button-prev"></div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <section class="cubes container cubes-container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span> - Facebook</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span> - Twitter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span> - TikTok</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span> - Instagram</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="testimony">
+            <div class="testimony__container container">
+                <img src="./images/left-arrow.svg" class="testimony__arrow" id="before" alt="">
+                <section class="testimony__body testimony__body--show" data-id="1">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Colaborador <span class="testimony__course">Ricardo Sierra</span></h2>
+                        <p class="testimony__review">Hardware Developer</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/Rick.png" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="2">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Colaborador <span class="testimony__course">Sebastián Castellanos</span></h2>
+                        <p class="testimony__review">Project Manager</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/Sebastián.jpg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="3">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Colaboradora <span class="testimony__course">Paulina Almada</span></h2>
+                        <p class="testimony__review">CEO</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/Pau.jpeg" class="testimony__img">
+                    </figure>
+                </section>
+
+                <section class="testimony__body" data-id="4">
+                    <div class="testimony__texts">
+                        <h2 class="subtitle">Colaborador <span class="testimony__course">Rommel Toledo</span></h2>
+                        <p class="testimony__review">Software Developer</p>
+                    </div>
+
+                    <figure class="testimony__picture">
+                        <img src="./images/Rommel.png" class="testimony__img">
+                    </figure>
+                </section>
+
+                <img src="./images/right-arrow.svg" class="testimony__arrow" id="next" alt="">
+            </div>
+        </section>
+
+        <!-- Nueva sección -->
+        <section class="new-section">
+            <div class="interface-container">
+        <!-- Contenido del contenedor de interfaz -->
+        <!-- Puedes agregar contenido adicional aquí -->
+    </div>
+
+    <div class="vertical-containers">
+        <!-- Contenido del primer contenedor -->
+        <div class="content-container">
+            <!-- Tu contenido aquí -->
+        </div>
+
+        <!-- Contenido del segundo contenedor -->
+        <div class="content-container">
+            <!-- Tu contenido aquí -->
+        </div>
+    </div>
+</section>
+
+        <section class="login container">
+            <div class="login-box">
+                <h2>Login</h2>
+                <form>
+                    <div class="user-box">
+                        <input type="text" name="" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" name="" required="">
+                        <label>Password</label>
+                    </div>
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Submit
+                    </a>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="./slider.js"></script>
+    <script src="./questions.js"></script>
+    <script src="./sticky.js"></script>
+    <script>
+        function toggleText(containerNumber) {
+            var textContainer = document.getElementById('aboutTextContainer' + containerNumber);
+            textContainer.classList.toggle('hidden');
+        }
+    </script>
+    <script>
+        function togglePriceText(elementNumber, event) {
+            event.preventDefault(); // Evitar la recarga de la página
+            var priceText = document.querySelectorAll('.price__features')[elementNumber - 1];
+            priceText.classList.toggle('hidden');
+        }
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      // Inicializa Swiper
+      var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+    </script>
+    
+</body>
+</html>

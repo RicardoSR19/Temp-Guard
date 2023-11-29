@@ -1,0 +1,993 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root{
+    --padding-container: 100px 0;
+    --color-title: #dff1f7;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    width:90%;
+    max-width:1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: #dff1f7;
+}
+
+.hero::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url('../images/TG.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+.nav{
+    --padding-container:0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav__title{
+    font-weight: 300;
+}
+
+.nav__link{
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav__items{
+    list-style: none;
+}
+
+.nav__links{
+    color:#dff1f7;
+    text-decoration: none;
+}
+
+.nav__menu{
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav__img{
+    display: block;
+    width: 30px;
+}
+
+.nav__close{
+    display: var(--show, none);
+}
+
+.hero__container{
+    max-width: 800px;
+    --padding-container:0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-content: center;
+    gap: lem;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero__title{
+    font-size: 3erm;
+}
+
+.hero__paragraph{
+    margin-bottom: 20px;
+}
+
+.cta{
+    display: inline-block;
+    background-color:#ff4d4d;
+    justify-self: center;
+    color: #dff1f7;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 32px;
+}
+
+.about{
+    text-align: center;
+}
+
+.subtitle{
+    color: var(--color-title);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about__paragraph{
+    line-height: 1.7;
+}
+
+.about__main{
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, auto));
+    align-items: start;
+}
+
+.about__icons{
+    display: grid;
+    gap: 1em;
+    justify-items: center;
+    width: 260px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.about__icon{
+    width: 40px;
+}
+
+.about__title{
+    color: #dff1f7;
+}
+
+.about__text-container {
+    border-radius: 15px; /* Puedes ajustar el valor según tus preferencias */
+    overflow: hidden;
+    padding: 20px; /* Ajusta este valor según tus preferencias */
+    background-color: #e53935; /* Cambia al color deseado */
+    position: relative; /* Necesario para el posicionamiento absoluto del contenedor interno */
+}
+
+.about__inner-container {
+    background-color: #fff; /* Color de fondo blanco */
+    border-radius: 10px; /* Puedes ajustar el valor según tus preferencias */
+    padding: 15px; /* Ajusta este valor según tus preferencias */
+    position: absolute;
+    top: 50%; /* Coloca el contenedor interno en el centro verticalmente */
+    left: 50%; /* Coloca el contenedor interno en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el contenedor interno */
+    width: 80%; /* Ajusta el ancho del contenedor interno según tus preferencias */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+/* Aplicar estas reglas solo a la clase 'about__paragraph' dentro del contenedor 'about__text-container' */
+.about__text-container .about__paragraph {
+    color: #dff1f7; /* Color de texto blanco */
+}
+
+.knowledge{
+    background-color: #162f4f;
+    opacity: 0.8;
+    background-image: radial-gradient(#000 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #162f4f 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10 px 10 px;
+    overflow: hidden;
+}
+
+.knowledge__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knowledge__text-container {
+    max-width: 500px;
+    background-color: #fff; /* Color de fondo blanco para el contenedor de texto */
+    padding: 20px; /* Añade un relleno para separar el texto del borde del contenedor */
+}
+
+.subtitle{
+    text-align: center; /* Justificar el texto */
+    color: #162f4f;
+}
+
+.knowledge__text {
+    text-align: justify; /* Justificar el texto */
+    color: #162f4f; /* Cambia el color del texto a blanco */
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.knowledge__picture{
+    max-width: 500px;
+}
+
+.knowledge__img{
+    width: 100%;
+    display: block;
+}
+
+.price{
+    text-align: center;
+}
+
+.price__table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: start;
+}
+
+.price__element{
+    background-color: #dff1f7;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color-plan: #000;
+    --color-price: #162F4F;
+    --bg-cta: #ff4d4d;
+    --color-cta: #dff1f7;
+    --color-items: #000;
+}
+
+.price__element--best{
+    width: 370px;
+    padding: 60px 40px;
+    background-color:#162F4F;
+    --color-plan: #fff;
+    --color-price: #162F4F;
+    --bg-cta: #ff4d4d;
+    --color-cta: #dff1f7;
+    --color-items: #bff1f7;
+}
+
+.price__name{
+    color: var(--color-plan);
+    margin-bottom: 15px;
+    font-weight: 300;
+}
+
+.price__price{
+    font-size: 1.6rem;
+    color: van(--color-price);
+}
+
+.price__price2{
+    font-size: 1.6rem;
+    color: #bff1f7
+}
+
+.price__items{
+    margin-top: 35px;
+    display: grid;
+    gap: 1em;
+    font-weight: 300;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    color: var(--color-items);
+}
+
+.price__cta{
+    display: block;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-decoration: none;
+    background-color: var(--bg-cta);
+    font-weight: 600;
+    color: var(--color-cta);
+    box-shadow: 0 0 1px#ff4d4d(0, 0, 0, .5);
+}
+
+.testimony{
+    background-color: #ff4d4d;
+    padding: 20px;
+}
+
+.testimony__container{
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    gap: 1em;
+    align-items: center;
+}
+
+.testimony__body{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+    grid-column: 2/3;
+    grid-row: 1/2; 
+    opacity: 0;
+    pointer-events: none;
+}
+
+.testimony__body--show{
+    pointer-events: unset;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.testimony__img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 50% 30%;
+}
+
+.testimony__texts{
+    max-width: 700px;
+}
+
+.testimony__course{
+    background-color:#162F4F;
+    color:#dff1f7;
+    display: inline-block;
+    padding: 5px;
+}
+
+.testimony__arrow{
+    width: 90%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .price__table {
+        flex-direction: column; /* Cambia la dirección del flex container a columna */
+        align-items: center; /* Alinea los elementos al centro */
+    }
+
+    .about__main {
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        align-items: center; /* Alinea los elementos al centro */
+    }
+}
+
+.questions{
+    text-align: center;
+}
+
+.questions__container{
+    display: grid;
+    gap: 2em;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.questions__padding{
+    padding: 0;
+    transition: padding .3s;
+    border: 1px solid #162F4F;
+    border-radius: 6px;
+}
+
+.questions__padding-add{
+    padding-bottom: 30px;
+}
+
+.questions__answer{
+    padding: 0 30px 0;
+    overflow: hidden;
+}
+
+.questions__title{
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0 30px;
+    cursor: pointer;
+    color: var(--color-title);
+    justify-content: space-between;
+}
+
+.questions__arrow{
+    border-radius: 50%;
+    background-color: var(--color-title);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    margin-left: 10px;
+    transition: transform .3s;
+}
+
+.questions__arrow--rotate{
+    transform: rotate(180deg);
+}
+
+.questions__show{
+    text-align: left;
+    height: 0;
+    transition: height .3s;
+}
+
+.questions__img{
+    display: block;
+}
+
+.login-box{
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    border-radius: 10px;
+    margin: 0 auto; /* Centrar horizontalmente */
+    margin-top: -100px; /* Ajusta la distancia superior según sea necesario */
+}
+
+.login-box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label, 
+.login-box .user-box input:valid~label{
+    top: -20px;
+    left: 0;
+    color:#ff4d4d;
+    font-size: 12;
+}
+
+.login-box form a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ff4d4d;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+
+.login-box a:hover{
+    background:#ff4d4d;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ff4d4d, 
+        0 0 25px #ff4d4d,
+        0 0 50px #03e9f4,
+        0 0 100px #03e9f4; 
+}
+
+.login-box a span{
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0%{
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0%{
+        top: -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0%{
+        right: -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0%{
+        bottom: -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+.cubes-container ul {
+    display: flex;
+    justify-content: center;
+}
+
+.cubes-container li{
+    list-style: none;
+    margin: 0 5px;
+}
+
+.cubes-container .fa-brands{
+    color:#262626;
+    font-size: 40px;
+    line-height: 80px;
+    transition: .5s;
+    padding-right: 14px;
+}
+
+.cubes-container a{
+    width: 210px;
+    height: 80px;
+    background: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding-left: 20px;
+    transform: rotate(-30deg) skew(25deg) translate(0, 0);
+    box-shadow: -20px 20px 10px #000;
+}
+
+.cubes-container a span{
+    color:#162F4F;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 4px;
+    transition: .5s;
+}
+
+.cubes-container a:before{
+    content:'';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background: #bff1f7;
+    top: 10px;
+    left: -20px;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.cubes-container a:after{
+    content:'';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    background: #bff1f7;
+    bottom: -20px;
+    left: -10px;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+.cubes-container a:hover{
+    transform: rotate(-30deg) skew(25deg);
+}
+
+li:hover .fa-brands,
+li:hover span{
+    color: #fff;
+}
+
+li:hover:nth-child(1){
+    & a{
+        background: #162F4F;
+
+        &::before{
+            background: #444cf7;
+        }
+
+        &::after{
+            background: #ff4d4d;   
+        }
+    }
+}
+
+li:hover:nth-child(2){
+    & a{
+        background: #162F4F;
+
+        &::before{
+            background: #444cf7;
+        }
+
+        &::after{
+            background: #ff4d4d;   
+        }
+    }
+}
+
+li:hover:nth-child(3){
+    & a{
+        background: #162F4F;
+
+        &::before{
+            background: #444cf7;
+        }
+
+        &::after{
+            background: #ff4d4d;   
+        }
+    }
+}
+
+li:hover:nth-child(4){
+    & a{
+        background: #162F4F;
+
+        &::before{
+            background: #444cf7;
+        }
+
+        &::after{
+            background: #ff4d4d;   
+        }
+    }
+}
+
+/* Agrega esta regla de estilo para el menú sticky */
+.nav.sticky {
+    position: fixed;
+    top: 0;
+    left: 20px; /* Establece la distancia desde el borde izquierdo */
+    width: calc(100% - 40px); /* Ajusta el ancho según tus preferencias */
+    height: 50px; /* Ajusta la altura según tus preferencias */
+    background-color: #162f4f;
+    z-index: 1000;
+    transition: 0.5s;
+    box-sizing: border-box; /* Incluye el padding en el ancho y alto total */
+    padding: 20px; /* Agrega padding para separación interna */
+}
+
+.nav.sticky .nav__links {
+    display: flex;
+    flex-direction: column;
+    background-color: #162f4f;
+}
+
+.knowledge__text-container {
+    border-radius: 15px;
+    overflow: hidden;
+    /* Añade padding si es necesario */
+    padding: 20px; /* Puedes ajustar este valor según tus preferencias */
+  }
+
+  .hidden {
+    display: none !important;
+}
+
+/* Agrega estos estilos para los botones en la sección about */
+.about__toggle {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para cuando el botón está en el estado activo (texto mostrado) */
+.about__toggle.active {
+    background-color: #e74c3c; /* Puedes cambiar esto al color que prefieras */
+}
+
+.about__button {
+    display: inline-block;
+    padding: 13px 30px;
+    border-radius: 32px;
+    background-color: #ff4d4d;
+    color: #dff1f7;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.about__button:hover {
+    background-color: #e53935; /* Cambia el color al pasar el mouse */
+}
+
+.about__icons-container {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 2px solid #162F4F;
+    background-color: #162F4F;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+    transition: transform 0.3s ease-in-out; /* Agrega una transición para un efecto suave */
+
+}
+
+.about__icons-container:hover {
+    transform: scale(1.05); /* Escala el contenedor al hacer hover */
+}
+
+/* Estilos para la nueva sección */
+.new-section {
+    text-align: center; /* Alinea el contenido al centro horizontalmente */
+    margin-bottom: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.interface-container {
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.section-title {
+    color: #162F4F; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente, ajusta según sea necesario */
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.vertical-containers {
+    display: flex;
+    justify-content: space-around; /* Espaciado uniforme entre los contenedores */
+}
+
+.content-container {
+    border: 2px solid #162F4F;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #162F4F;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 45%; /* Ancho de cada contenedor, ajusta según sea necesario */
+}
+
+.container-title {
+    color: #dff1f7; /* Color del texto del título del contenedor */
+    font-size: 18px; /* Tamaño de fuente del título del contenedor, ajusta según sea necesario */
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .vertical-containers {
+        flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+        align-items: center; /* Centra los contenedores en la columna */
+    }
+
+    .content-container {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
+/* Estilos para la computadora */
+.computer-container {
+    position: relative;
+    display: inline-block;
+    width: 300px; /* Ancho de la computadora, ajusta según sea necesario */
+    height: 200px; /* Altura de la computadora, ajusta según sea necesario */
+    background-color: #e0e0e0; /* Color del cuerpo de la computadora */
+    border: 8px solid #808080; /* Color del borde de la computadora */
+    border-radius: 20px; /* Radio de borde para darle forma redondeada */
+    overflow: hidden;
+}
+
+.screen {
+    background-color: #fff; /* Color de la pantalla de la computadora */
+    padding: 10px;
+    height: 80%; /* Altura de la pantalla, ajusta según sea necesario */
+    overflow-y: auto; /* Añade una barra de desplazamiento vertical si es necesario */
+}
+
+.body {
+    background-color: #808080; /* Color del cuerpo de la computadora */
+    height: 20%; /* Altura del cuerpo, ajusta según sea necesario */
+}
+
+.keyboard {
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+.keyboard button {
+    padding: 5px 10px;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .computer-container {
+        width: 100%; /* Hace que la computadora ocupe el ancho completo en pantallas pequeñas */
+    }
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .vertical-containers {
+        flex-direction: column; /* Cambia a disposición de columna en pantallas pequeñas */
+        align-items: center; /* Centra los contenedores en la columna */
+    }
+
+    .content-container {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+    }
+}
+
+/* Estilo para el botón "Calefacción" */
+.keyboard button:nth-child(1) {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.keyboard button:nth-child(1):hover {
+    background-color: darkred;
+}
+
+/* Estilo para el botón "Refrigeración" */
+.keyboard button:nth-child(2) {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.keyboard button:nth-child(2):hover {
+    background-color: darkblue;
+}
+
+/* Estilos para el teléfono simulado */
+.phone-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px; /* Ajusta este margen según sea necesario */
+}
+
+.phone-container .phone {
+    width: 250px; /* Ajusta el ancho del teléfono según sea necesario */
+    padding: 10px;
+    background-color: #fff; /* Color de fondo del teléfono */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Sombra del teléfono */
+}
+
+.phone-container .screen {
+    width: 350px; /* Ancho del teléfono */
+    height: 800px; /* Alto del teléfono */
+    background-image: url('URL_DE_LA_IMAGEN_DEL_TELEFONO');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #000; /* Borde negro alrededor de la pantalla */
+    border-radius: 10px;
+}
+
+
+.phone-wrapper {
+    position: relative;
+    width: 500px; /* Ancho del teléfono */
+    height: 950px; /* Alto del teléfono */
+    margin: 50px auto;
+    overflow: hidden;
+}
+
+  .swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 36px;
+    position: relative;
+}
+
+.imgt {
+    width: 88%;
+    height: 92%;
+    object-fit: fill; /* Ajusta el tamaño de la imagen manteniendo la proporción y cubriendo completamente */
+    border-radius: 20px; /* Redondea los bordes de la imagen */
+    position: absolute;
+    top: 4%;
+    bottom: 0;
+    left: 6%;
+    right: 0;
+    z-index: -1; /* Coloca la imagen detrás del contenido del slide */
+  }
